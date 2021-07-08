@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Calendario</title>
+<link rel="stylesheet" href="css/calendario.css">
+<div id="barra_menu">
+				<ul id="menu">
+					<li class="current"><a href="index.html">Inicio</a></li>
+					<li><a href="carreras.html">Carreras</a></li>
+					<li><a href="becas.html">Becas</a></li>
+					<li><a href="calendario.html">Calendario</a></li>
+					<li><a href="autoridades.html">Autoridades</a></li>
+				</ul>
+			</div>
+			
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script src="jquery.ui.datepicker-es.js"></script>
+
+<script>
+$(function () {
+$.datepicker.setDefaults($.datepicker.regional["es"]);
+$("#datepicker").datepicker({
+firstDay: 1,
+onSelect: function (date) {
+alert(date)
+},
+});
+});
+</script>
+</head>
+
+<body>
+<div align="left"></div><h1>Fecha:</h1>
+<div id="datepicker"></div>
+</body>
+</html>
